@@ -4,7 +4,7 @@ import json
 
 # Create your views here.
 
-OPENWEATHERMAP_API_KEY = '39e79c59545a3f897222433028f22f28'
+OPENWEATHERMAP_API_KEY = 'YOUR_API_KEY'
 
 def getWeather(request):
 
