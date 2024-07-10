@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="logo"></div>
+    <div class="name">
+        <h1>Weather app</h1>
+    </div>
+    <hr><br>
+    <form method="post" >
+        {% csrf_token %}
+        <div class="form-class">
+            <input type="text", name="city", placeholder="search" class = "inp">
+            <br><br>
+            <button type="submit" class="buttons">Submit</button>
+        </div>
+    </form>
+    <div class="contents">
+        <h2><b>{{Description}}</b></h2>
+        <h3><b>Temperature: </b><i>{{temperature}}</i></h3>
+        <h3><b>Humidity: </b><i>{{humidity}}</i></h3>
+        <h3><b>Wind speed: </b><i>{{windSpeed}}</i></h3>
+    </div>
+</body>
+</html>
